@@ -34,7 +34,6 @@ class AlcoholFormViewController: UIViewController {
     }
     
     func setupUI() {
-        self.setNavigationTitle(title: "Add alcohol")
         titleLabels.forEach({ $0.font = .poppinsRegular(size: 10) })
         cancelButton.titleLabel?.font = .montserratMedium(size: 15)
         saveButton.titleLabel?.font = .montserratSemiBold(size: 15)
@@ -48,6 +47,10 @@ class AlcoholFormViewController: UIViewController {
         nameTextField.delegate = self
         volumeTextField.baseDelegate = self
         quantityTextField.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.setBlackNavigationColor()
     }
     
     func subscribe() {
@@ -75,7 +78,6 @@ class AlcoholFormViewController: UIViewController {
         typeDropDown.direction = .bottom
         DropDown.appearance().textColor = .black
         DropDown.appearance().textFont = .montserratMedium(size: 16) ?? .systemFont(ofSize: 16)
-//        DropDown.appearance().selectionBackgroundColor = .lightGray
         typeDropDown.addShadow()
         
         typeDropDown.selectionAction = { [weak self] (index: Int, item: String) in

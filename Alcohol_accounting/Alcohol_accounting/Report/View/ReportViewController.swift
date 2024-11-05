@@ -15,7 +15,9 @@ class ReportViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.setBlackNavigationColor()
+    }
     /*
     // MARK: - Navigation
 

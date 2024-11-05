@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lBV-f7-z6O">
-                                <rect key="frame" x="200.66666666666666" y="33.666666666666664" width="79.333333333333343" height="24"/>
+                                <rect key="frame" x="168.66666666666666" y="33.666666666666664" width="111.33333333333334" height="24"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRB-oU-Sru">
                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -63,6 +63,18 @@
                                         <state key="normal" image="plus"/>
                                         <connections>
                                             <action selector="clickedPlus:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JwM-p5-sHq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjr-rS-Ykd">
+                                        <rect key="frame" x="87.333333333333343" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Nok-jy-Nsc"/>
+                                            <constraint firstAttribute="width" constant="24" id="bNd-cF-PZ8"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="edit"/>
+                                        <connections>
+                                            <action selector="clickedEdit:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3UU-dN-Trv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -100,6 +112,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="edit" width="20" height="20"/>
         <image name="minus" width="24" height="24"/>
         <image name="plus" width="24" height="24"/>
     </resources>

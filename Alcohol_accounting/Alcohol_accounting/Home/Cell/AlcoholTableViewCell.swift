@@ -10,6 +10,7 @@ import UIKit
 protocol AlcoholTabelViewCellDelegate: AnyObject {
     func increment(by id: UUID)
     func decrement(by id: UUID)
+    func edit(by id: UUID)
 }
 
 class AlcoholTableViewCell: UITableViewCell {
@@ -50,18 +51,18 @@ class AlcoholTableViewCell: UITableViewCell {
     @IBAction func clickedMinus(_ sender: UIButton) {
         if let id = id {
             delegate?.decrement(by: id)
-//            HomeViewModel.shared.decrementAlcoholQuantity(for: id) { [weak self] error in
-//                if let self = self, error == nil {
-//                    self.
-//                }
-//            }
         }
     }
     
     @IBAction func clickedPlus(_ sender: UIButton) {
         if let id = id {
             delegate?.increment(by: id)
-//            HomeViewModel.shared.incrementAlcoholQuantity(for: id, completion: <#T##((any Error)?) -> Void#>)
+        }
+    }
+    
+    @IBAction func clickedEdit(_ sender: UIButton) {
+        if let id = id {
+            delegate?.edit(by: id)
         }
     }
 }

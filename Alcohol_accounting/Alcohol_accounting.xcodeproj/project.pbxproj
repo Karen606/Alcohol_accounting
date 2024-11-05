@@ -22,6 +22,10 @@
 		6B7B60BB2CDA33A2007F45FF /* AlcoholTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7B60BA2CDA33A2007F45FF /* AlcoholTableViewCell.xib */; };
 		6B7B60BC2CDA33A2007F45FF /* AlcoholTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60B92CDA33A2007F45FF /* AlcoholTableViewCell.swift */; };
 		6B7B60BF2CDA396E007F45FF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60BE2CDA396D007F45FF /* HomeViewModel.swift */; };
+		6B7B60C42CDA751C007F45FF /* CorrectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7B60C32CDA751C007F45FF /* CorrectionViewController.xib */; };
+		6B7B60C52CDA751C007F45FF /* CorrectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60C22CDA751C007F45FF /* CorrectionViewController.swift */; };
+		6B7B60C72CDA75BE007F45FF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60C62CDA75BE007F45FF /* NavigationViewController.swift */; };
+		6B7B60CA2CDA7BCF007F45FF /* CorrectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60C92CDA7BCF007F45FF /* CorrectionViewModel.swift */; };
 		6BE641412CD9555F00CB5FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE641402CD9555F00CB5FD9 /* AppDelegate.swift */; };
 		6BE641432CD9555F00CB5FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE641422CD9555F00CB5FD9 /* SceneDelegate.swift */; };
 		6BE641482CD9555F00CB5FD9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6BE641472CD9555F00CB5FD9 /* Base */; };
@@ -63,6 +67,10 @@
 		6B7B60B92CDA33A2007F45FF /* AlcoholTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholTableViewCell.swift; sourceTree = "<group>"; };
 		6B7B60BA2CDA33A2007F45FF /* AlcoholTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlcoholTableViewCell.xib; sourceTree = "<group>"; };
 		6B7B60BE2CDA396D007F45FF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6B7B60C22CDA751C007F45FF /* CorrectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionViewController.swift; sourceTree = "<group>"; };
+		6B7B60C32CDA751C007F45FF /* CorrectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectionViewController.xib; sourceTree = "<group>"; };
+		6B7B60C62CDA75BE007F45FF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		6B7B60C92CDA7BCF007F45FF /* CorrectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionViewModel.swift; sourceTree = "<group>"; };
 		6BE6413D2CD9555F00CB5FD9 /* Alcohol_accounting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcohol_accounting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE641402CD9555F00CB5FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BE641422CD9555F00CB5FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +160,32 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B7B60C02CDA72E1007F45FF /* Correction */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60C82CDA7BC2007F45FF /* ViewModel */,
+				6B7B60C12CDA7309007F45FF /* View */,
+			);
+			path = Correction;
+			sourceTree = "<group>";
+		};
+		6B7B60C12CDA7309007F45FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60C22CDA751C007F45FF /* CorrectionViewController.swift */,
+				6B7B60C32CDA751C007F45FF /* CorrectionViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B7B60C82CDA7BC2007F45FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60C92CDA7BCF007F45FF /* CorrectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6BE641342CD9555F00CB5FD9 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +207,7 @@
 		6BE6413F2CD9555F00CB5FD9 /* Alcohol_accounting */ = {
 			isa = PBXGroup;
 			children = (
+				6B7B60C02CDA72E1007F45FF /* Correction */,
 				6B7B60AC2CD9868F007F45FF /* CoreData */,
 				6BE6415D2CD956FE00CB5FD9 /* Settings */,
 				6BE6415C2CD956F700CB5FD9 /* Report */,
@@ -195,6 +230,7 @@
 			children = (
 				6BE641582CD9561A00CB5FD9 /* TabBarViewController.swift */,
 				6BE641462CD9555F00CB5FD9 /* TabBar.storyboard */,
+				6B7B60C62CDA75BE007F45FF /* NavigationViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -383,6 +419,7 @@
 				6BE641602CD9571300CB5FD9 /* Home.storyboard in Resources */,
 				6BE641782CD9674000CB5FD9 /* Montserrat-Medium.ttf in Resources */,
 				6BE6416E2CD9590900CB5FD9 /* Settings.storyboard in Resources */,
+				6B7B60C42CDA751C007F45FF /* CorrectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7B60C72CDA75BE007F45FF /* NavigationViewController.swift in Sources */,
 				6B7B60A12CD97CEC007F45FF /* ShadowView.swift in Sources */,
 				6B7B60BF2CDA396E007F45FF /* HomeViewModel.swift in Sources */,
 				6BE641622CD9572700CB5FD9 /* HomeViewController.swift in Sources */,
@@ -443,10 +481,12 @@
 				6B7B60A32CD97DC2007F45FF /* BaseTextField.swift in Sources */,
 				6BE641412CD9555F00CB5FD9 /* AppDelegate.swift in Sources */,
 				6BE641432CD9555F00CB5FD9 /* SceneDelegate.swift in Sources */,
+				6B7B60CA2CDA7BCF007F45FF /* CorrectionViewModel.swift in Sources */,
 				6B7B60B32CD98946007F45FF /* String.swift in Sources */,
 				6B7B609D2CD97677007F45FF /* UIView.swift in Sources */,
 				6B7B60BC2CDA33A2007F45FF /* AlcoholTableViewCell.swift in Sources */,
 				6BE641742CD9667700CB5FD9 /* Font.swift in Sources */,
+				6B7B60C52CDA751C007F45FF /* CorrectionViewController.swift in Sources */,
 				6B7B60B72CDA1960007F45FF /* BasePriceTextField.swift in Sources */,
 				6B7B60AB2CD98610007F45FF /* AlcoholModel.swift in Sources */,
 				6BE6414B2CD9555F00CB5FD9 /* Alcohol_accounting.xcdatamodeld in Sources */,

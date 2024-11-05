@@ -16,15 +16,27 @@ extension UIViewController {
         titleLabel.font = .montserratMedium(size: 28)
         titleLabel.textAlignment = .center
         titleLabel.sizeToFit()
-        self.tabBarController?.navigationItem.titleView = titleLabel
+        self.navigationItem.titleView = titleLabel
     }
     
     func setNaviagtionCloseButton() {
         let backButton = UIButton(type: .custom)
-//        backButton.setImage(UIImage.close, for: .normal)
+        backButton.setImage(UIImage.backIcon, for: .normal)
         backButton.imageView?.contentMode = .scaleAspectFit
         backButton.addTarget(self, action: #selector(clickedBack), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+    }
+    
+    func setClearNavigationColor() {
+        if let navigation = self.navigationController as? NavigationViewController {
+            navigation.clearBackorund()
+        }
+    }
+    
+    func setBlackNavigationColor() {
+        if let navigation = self.navigationController as? NavigationViewController {
+            navigation.blackBackround()
+        }
     }
     
     @objc func clickedBack() {

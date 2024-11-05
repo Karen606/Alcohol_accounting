@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CorrectionViewController" customModule="Alcohol_accounting" customModuleProvider="target">
+            <connections>
+                <outlet property="nameTextField" destination="FEz-Tn-hHn" id="UDM-TY-aSW"/>
+                <outlet property="quantityTextField" destination="KdC-bI-3Vi" id="1TQ-AF-h3w"/>
+                <outlet property="saveButton" destination="Pga-vf-eRe" id="mX6-ip-NUW"/>
+                <outlet property="typeTextField" destination="ojB-AE-Mwq" id="F4K-wh-Wsk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="titleLabels" destination="9zP-Tl-DL7" collectionClass="NSMutableArray" id="PUt-WP-qJd"/>
+                <outletCollection property="titleLabels" destination="MHS-cE-jPe" collectionClass="NSMutableArray" id="5Wx-ds-3yq"/>
+                <outletCollection property="titleLabels" destination="uDp-BV-b8o" collectionClass="NSMutableArray" id="Jm6-OU-Wes"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtf-o9-5Rj" customClass="ShadowView" customModule="Alcohol_accounting" customModuleProvider="target">
+                    <rect key="frame" x="16" y="83" width="361" height="403"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="lpW-at-dRc">
+                            <rect key="frame" x="10" y="19" width="341" height="244"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ko7-4f-3Mz">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="74"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zP-Tl-DL7">
+                                            <rect key="frame" x="0.0" y="0.0" width="29.333333333333332" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ojB-AE-Mwq" customClass="BaseTextField" customModule="Alcohol_accounting" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="28" width="341" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="oMr-27-ukD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ojB-AE-Mwq" secondAttribute="trailing" id="Har-MV-60u"/>
+                                        <constraint firstItem="ojB-AE-Mwq" firstAttribute="top" secondItem="9zP-Tl-DL7" secondAttribute="bottom" constant="8" symbolic="YES" id="fd3-yA-oZI"/>
+                                        <constraint firstAttribute="bottom" secondItem="ojB-AE-Mwq" secondAttribute="bottom" id="hwA-le-VGj"/>
+                                        <constraint firstItem="ojB-AE-Mwq" firstAttribute="leading" secondItem="ko7-4f-3Mz" secondAttribute="leading" id="moW-sm-kdm"/>
+                                        <constraint firstItem="9zP-Tl-DL7" firstAttribute="leading" secondItem="ko7-4f-3Mz" secondAttribute="leading" id="sSd-7E-HiR"/>
+                                        <constraint firstItem="9zP-Tl-DL7" firstAttribute="top" secondItem="ko7-4f-3Mz" secondAttribute="top" id="wjH-2s-qSK"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Stv-uE-Xxx">
+                                    <rect key="frame" x="0.0" y="85" width="341" height="74"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHS-cE-jPe">
+                                            <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEz-Tn-hHn" customClass="BasePriceTextField" customModule="Alcohol_accounting" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="28" width="341" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="peJ-2i-Zhh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="FEz-Tn-hHn" firstAttribute="leading" secondItem="Stv-uE-Xxx" secondAttribute="leading" id="QgN-lQ-I13"/>
+                                        <constraint firstItem="MHS-cE-jPe" firstAttribute="top" secondItem="Stv-uE-Xxx" secondAttribute="top" id="ag6-Yt-orw"/>
+                                        <constraint firstItem="MHS-cE-jPe" firstAttribute="leading" secondItem="Stv-uE-Xxx" secondAttribute="leading" id="asF-xs-zDl"/>
+                                        <constraint firstAttribute="bottom" secondItem="FEz-Tn-hHn" secondAttribute="bottom" id="cWB-g6-twS"/>
+                                        <constraint firstItem="FEz-Tn-hHn" firstAttribute="top" secondItem="MHS-cE-jPe" secondAttribute="bottom" constant="8" symbolic="YES" id="f7n-7T-rYh"/>
+                                        <constraint firstAttribute="trailing" secondItem="FEz-Tn-hHn" secondAttribute="trailing" id="oLU-rq-9l1"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-dt-6wT">
+                                    <rect key="frame" x="0.0" y="170" width="341" height="74"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDp-BV-b8o">
+                                            <rect key="frame" x="0.0" y="0.0" width="101" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-bI-3Vi" customClass="BaseTextField" customModule="Alcohol_accounting" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="28" width="341" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="l8E-Ht-y2n"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="KdC-bI-3Vi" firstAttribute="top" secondItem="uDp-BV-b8o" secondAttribute="bottom" constant="8" symbolic="YES" id="5ry-XF-Hqd"/>
+                                        <constraint firstAttribute="bottom" secondItem="KdC-bI-3Vi" secondAttribute="bottom" id="Uzk-mZ-ez2"/>
+                                        <constraint firstItem="KdC-bI-3Vi" firstAttribute="leading" secondItem="1Fd-dt-6wT" secondAttribute="leading" id="lC7-iS-YyA"/>
+                                        <constraint firstAttribute="trailing" secondItem="KdC-bI-3Vi" secondAttribute="trailing" id="sm8-CH-1xX"/>
+                                        <constraint firstItem="uDp-BV-b8o" firstAttribute="leading" secondItem="1Fd-dt-6wT" secondAttribute="leading" id="y7f-80-dQb"/>
+                                        <constraint firstItem="uDp-BV-b8o" firstAttribute="top" secondItem="1Fd-dt-6wT" secondAttribute="top" id="yqk-Eb-6cA"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pga-vf-eRe" customClass="BaseButton" customModule="Alcohol_accounting" customModuleProvider="target">
+                            <rect key="frame" x="75.666666666666686" y="329" width="210" height="48"/>
+                            <color key="backgroundColor" name="baseDark"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="210" id="I0C-tn-YoO"/>
+                                <constraint firstAttribute="height" constant="48" id="jbw-Lv-Bor"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Apply">
+                                <color key="titleColor" name="whiteText"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clickedApply:" destination="-1" eventType="touchUpInside" id="vhb-hD-NNT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Pga-vf-eRe" secondAttribute="bottom" constant="26" id="5nQ-Pu-5vE"/>
+                        <constraint firstItem="Pga-vf-eRe" firstAttribute="centerX" secondItem="vtf-o9-5Rj" secondAttribute="centerX" id="8k1-xR-2XQ"/>
+                        <constraint firstItem="Pga-vf-eRe" firstAttribute="top" secondItem="1Fd-dt-6wT" secondAttribute="bottom" constant="66" id="9AV-t0-gt9"/>
+                        <constraint firstAttribute="trailing" secondItem="lpW-at-dRc" secondAttribute="trailing" constant="10" id="PzL-cQ-GgJ"/>
+                        <constraint firstItem="lpW-at-dRc" firstAttribute="top" secondItem="vtf-o9-5Rj" secondAttribute="top" constant="19" id="pj6-rj-Fhp"/>
+                        <constraint firstItem="lpW-at-dRc" firstAttribute="leading" secondItem="vtf-o9-5Rj" secondAttribute="leading" constant="10" id="sJc-HU-Z0c"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vtf-o9-5Rj" secondAttribute="trailing" constant="16" id="1BH-1o-xVD"/>
+                <constraint firstItem="vtf-o9-5Rj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="AKU-zD-wRc"/>
+                <constraint firstItem="vtf-o9-5Rj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="wNV-WH-xzQ"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="yg1-Ba-RDe" appends="YES" id="BIE-cF-2dR"/>
+            </connections>
+            <point key="canvasLocation" x="75.572519083969468" y="20.422535211267608"/>
+        </view>
+        <tapGestureRecognizer id="yg1-Ba-RDe">
+            <connections>
+                <action selector="handleTapGesture:" destination="-1" id="L47-MT-6B5"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <namedColor name="baseDark">
+            <color red="0.11800000071525574" green="0.11800000071525574" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

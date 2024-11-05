@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="fFO-Pt-PnL">
             <objects>
-                <navigationController id="ovP-S3-7QI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" id="ovP-S3-7QI" customClass="NavigationViewController" customModule="Alcohol_accounting" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m1l-nL-Ckv">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

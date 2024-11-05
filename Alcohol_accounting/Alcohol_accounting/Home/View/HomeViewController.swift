@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchData()
+        setClearNavigationColor()
     }
     
     func setupUI() {
@@ -102,5 +103,12 @@ extension HomeViewController: AlcoholTabelViewCellDelegate {
                 self.viewModel.fetchData()
             }
         }
+    }
+    
+    func edit(by id: UUID) {
+        let correctionVC = CorrectionViewController(nibName: "CorrectionViewController", bundle: nil)
+        let alcohol = viewModel.alcohols.first(where: { $0.id == id })
+        CorrectionViewModel.shared.alcoholModel = alcohol
+        self.navigationController?.pushViewController(correctionVC, animated: true)
     }
 }
