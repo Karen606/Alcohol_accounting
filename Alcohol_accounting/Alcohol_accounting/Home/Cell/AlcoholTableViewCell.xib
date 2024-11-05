@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="KGk-i7-Jjw" customClass="AlcoholTableViewCell" customModule="Alcohol_accounting" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUv-OY-Blw">
+                        <rect key="frame" x="12" y="0.0" width="296" height="91"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jw-Dv-Cm1">
+                                <rect key="frame" x="16" y="16" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52d-qY-SLZ">
+                                <rect key="frame" x="16" y="51" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lBV-f7-z6O">
+                                <rect key="frame" x="200.66666666666666" y="33.666666666666664" width="79.333333333333343" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRB-oU-Sru">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="WLN-hB-4ET"/>
+                                            <constraint firstAttribute="width" constant="24" id="vX9-Gc-ZCD"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="minus"/>
+                                        <connections>
+                                            <action selector="clickedMinus:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="og3-uH-eeo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-0p-6VQ">
+                                        <rect key="frame" x="31.999999999999996" y="0.0" width="15.333333333333332" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFq-6g-zdy">
+                                        <rect key="frame" x="55.333333333333343" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="PWK-ur-GWW"/>
+                                            <constraint firstAttribute="width" constant="24" id="oRX-be-8By"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="plus"/>
+                                        <connections>
+                                            <action selector="clickedPlus:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JwM-p5-sHq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.050755380794701987" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="52d-qY-SLZ" firstAttribute="leading" secondItem="MUv-OY-Blw" secondAttribute="leading" constant="16" id="1hc-TP-YmY"/>
+                            <constraint firstItem="lBV-f7-z6O" firstAttribute="centerY" secondItem="MUv-OY-Blw" secondAttribute="centerY" id="35f-MA-T3f"/>
+                            <constraint firstAttribute="bottom" secondItem="52d-qY-SLZ" secondAttribute="bottom" constant="16" id="HTK-UR-Yxw"/>
+                            <constraint firstItem="52d-qY-SLZ" firstAttribute="top" secondItem="5Jw-Dv-Cm1" secondAttribute="bottom" constant="11" id="WVj-92-Nlo"/>
+                            <constraint firstItem="lBV-f7-z6O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Jw-Dv-Cm1" secondAttribute="trailing" constant="8" id="h1W-E2-xGh"/>
+                            <constraint firstAttribute="trailing" secondItem="lBV-f7-z6O" secondAttribute="trailing" constant="16" id="i0a-sf-Ya6"/>
+                            <constraint firstItem="5Jw-Dv-Cm1" firstAttribute="top" secondItem="MUv-OY-Blw" secondAttribute="top" constant="16" id="jQQ-5U-dyi"/>
+                            <constraint firstItem="lBV-f7-z6O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="52d-qY-SLZ" secondAttribute="trailing" constant="8" id="ueM-3D-TnL"/>
+                            <constraint firstItem="5Jw-Dv-Cm1" firstAttribute="leading" secondItem="MUv-OY-Blw" secondAttribute="leading" constant="16" id="zCc-f1-fAY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MUv-OY-Blw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="igZ-cb-2Pt"/>
+                    <constraint firstAttribute="trailing" secondItem="MUv-OY-Blw" secondAttribute="trailing" constant="12" id="ijz-vx-c9j"/>
+                    <constraint firstAttribute="bottom" secondItem="MUv-OY-Blw" secondAttribute="bottom" id="kq8-1Q-md6"/>
+                    <constraint firstItem="MUv-OY-Blw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="t6k-Sh-V0L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="MUv-OY-Blw" id="kuv-Vm-L9J"/>
+                <outlet property="nameLabel" destination="52d-qY-SLZ" id="HBa-1J-DVs"/>
+                <outlet property="quantityLabel" destination="iOT-0p-6VQ" id="2ML-sb-ovh"/>
+                <outlet property="typeLabel" destination="5Jw-Dv-Cm1" id="RyP-9F-iNZ"/>
+            </connections>
+            <point key="canvasLocation" x="100.76335877862596" y="32.74647887323944"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="minus" width="24" height="24"/>
+        <image name="plus" width="24" height="24"/>
+    </resources>
+</document>

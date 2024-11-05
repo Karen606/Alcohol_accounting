@@ -75,7 +75,7 @@ class AlcoholFormViewController: UIViewController {
         typeDropDown.direction = .bottom
         DropDown.appearance().textColor = .black
         DropDown.appearance().textFont = .montserratMedium(size: 16) ?? .systemFont(ofSize: 16)
-        DropDown.appearance().selectionBackgroundColor = .lightGray
+//        DropDown.appearance().selectionBackgroundColor = .lightGray
         typeDropDown.addShadow()
         
         typeDropDown.selectionAction = { [weak self] (index: Int, item: String) in
@@ -89,21 +89,36 @@ class AlcoholFormViewController: UIViewController {
         typeDropDown.width = typeButton.bounds.width
         typeDropDown.bottomOffset = CGPoint(x: typeBgView.frame.minX, y: typeBgView.frame.maxY + 2)
     }
+    
+    func clear() {
+        viewModel.clear()
+        nameTextField.text = nil
+        volumeTextField.text = nil
+        quantityTextField.text = nil
+        typeButton.setTitle(nil, for: .normal)
+    }
 
     @IBAction func chooseType(_ sender: UIButton) {
         typeDropDown.show()
     }
     
     @IBAction func clickedCancel(_ sender: UIButton) {
-        
+        self.clear()
     }
     
     @IBAction func clickedSave(_ sender: UIButton) {
-        
+        viewModel.save { [weak self] error in
+            guard let self = self else { return }
+            if let error = error {
+                self.showErrorAlert(message: error.localizedDescription)
+            } else {
+                self.clear()
+            }
+        }
     }
     
     deinit {
-        viewModel.clear()
+        clear()
     }
 }
 

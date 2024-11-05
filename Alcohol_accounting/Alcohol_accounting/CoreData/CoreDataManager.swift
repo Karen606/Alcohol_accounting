@@ -115,4 +115,33 @@ class CoreDataManager {
             }
         }
     }
+    
+    func updateAlcoholQuantity(for id: UUID, by amount: Int64, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Alcohol> = Alcohol.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+            
+            do {
+                if let alcohol = try backgroundContext.fetch(fetchRequest).first {
+                    alcohol.quantity += amount
+                    if alcohol.quantity < 0 {
+                        alcohol.quantity = 0 // Ensures quantity doesn't go negative
+                    }
+                    try backgroundContext.save()
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Alcohol not found"]))
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
 }
