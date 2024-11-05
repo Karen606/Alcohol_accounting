@@ -1,0 +1,6 @@
+framework module Pods_Alcohol_accounting {
+  umbrella header "Pods-Alcohol_accounting-umbrella.h"
+
+  export *
+  module * { export * }
+}

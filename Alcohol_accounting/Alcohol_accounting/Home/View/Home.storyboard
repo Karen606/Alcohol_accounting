@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,10 +20,32 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mt-qf-nFz">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcohol reserves" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNK-Hl-DZc">
+                                        <rect key="frame" x="137" y="107" width="119" height="19"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <color key="textColor" name="whiteText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Vk-aK-uw7">
+                                        <rect key="frame" x="0.0" y="170" width="393" height="599"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
                                 <viewLayoutGuide key="safeArea" id="Ee6-zT-ggM"/>
                                 <color key="backgroundColor" name="background"/>
+                                <constraints>
+                                    <constraint firstItem="6Vk-aK-uw7" firstAttribute="leading" secondItem="Ee6-zT-ggM" secondAttribute="leading" id="297-kG-GnF"/>
+                                    <constraint firstItem="GNK-Hl-DZc" firstAttribute="centerX" secondItem="Ee6-zT-ggM" secondAttribute="centerX" id="36x-Zd-Ybv"/>
+                                    <constraint firstItem="Ee6-zT-ggM" firstAttribute="bottom" secondItem="6Vk-aK-uw7" secondAttribute="bottom" id="CWd-bd-DqG"/>
+                                    <constraint firstItem="Ee6-zT-ggM" firstAttribute="trailing" secondItem="6Vk-aK-uw7" secondAttribute="trailing" id="VH9-9S-Y9K"/>
+                                    <constraint firstItem="6Vk-aK-uw7" firstAttribute="top" secondItem="GNK-Hl-DZc" secondAttribute="bottom" constant="44" id="XH7-YG-huU"/>
+                                    <constraint firstItem="GNK-Hl-DZc" firstAttribute="top" secondItem="Ee6-zT-ggM" secondAttribute="top" constant="48" id="yZ8-0G-nmD"/>
+                                </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kac-mg-0kn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="5mt-qf-nFz" secondAttribute="bottom" id="K62-VJ-Eq6"/>
@@ -33,6 +56,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="JyZ-gQ-dVe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="alcoholsTableView" destination="6Vk-aK-uw7" id="fRD-ng-AnG"/>
+                        <outlet property="titleLabel" destination="GNK-Hl-DZc" id="4e1-bd-Xx3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +69,13 @@
     <resources>
         <image name="home" width="24" height="24"/>
         <namedColor name="background">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.79757346854304634" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.79799997806549072" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="whiteText">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

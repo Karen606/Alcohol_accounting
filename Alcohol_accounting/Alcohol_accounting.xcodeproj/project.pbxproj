@@ -3,10 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B7B609D2CD97677007F45FF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B609C2CD97677007F45FF /* UIView.swift */; };
+		6B7B609F2CD976A3007F45FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B609E2CD976A3007F45FF /* ViewController.swift */; };
+		6B7B60A12CD97CEC007F45FF /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60A02CD97CEC007F45FF /* ShadowView.swift */; };
+		6B7B60A32CD97DC2007F45FF /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60A22CD97DC2007F45FF /* BaseTextField.swift */; };
+		6B7B60A52CD982C3007F45FF /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60A42CD982C3007F45FF /* BaseButton.swift */; };
+		6B7B60A72CD984AD007F45FF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B7B60A62CD984AD007F45FF /* Poppins-Regular.ttf */; };
+		6B7B60AB2CD98610007F45FF /* AlcoholModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60AA2CD98606007F45FF /* AlcoholModel.swift */; };
+		6B7B60AE2CD98698007F45FF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60AD2CD98698007F45FF /* CoreDataManager.swift */; };
+		6B7B60B12CD9885D007F45FF /* AlcoholFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60B02CD98854007F45FF /* AlcoholFormViewModel.swift */; };
+		6B7B60B32CD98946007F45FF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60B22CD98946007F45FF /* String.swift */; };
+		6B7B60B52CDA18DD007F45FF /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60B42CDA18DD007F45FF /* Double.swift */; };
+		6B7B60B72CDA1960007F45FF /* BasePriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60B62CDA1960007F45FF /* BasePriceTextField.swift */; };
 		6BE641412CD9555F00CB5FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE641402CD9555F00CB5FD9 /* AppDelegate.swift */; };
 		6BE641432CD9555F00CB5FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE641422CD9555F00CB5FD9 /* SceneDelegate.swift */; };
 		6BE641482CD9555F00CB5FD9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6BE641472CD9555F00CB5FD9 /* Base */; };
@@ -27,11 +39,24 @@
 		6BE641792CD9674000CB5FD9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE641762CD9674000CB5FD9 /* Montserrat-Regular.ttf */; };
 		6BE6417A2CD9674000CB5FD9 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE641772CD9674000CB5FD9 /* Montserrat-SemiBold.ttf */; };
 		6BE6417E2CD967B400CB5FD9 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE6417B2CD967B400CB5FD9 /* Poppins-Medium.ttf */; };
-		6BE6417F2CD967B400CB5FD9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE6417C2CD967B400CB5FD9 /* Poppins-Regular.ttf */; };
 		6BE641802CD967B400CB5FD9 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE6417D2CD967B400CB5FD9 /* Poppins-Light.ttf */; };
+		CACA835B7D479C1421A3D6DC /* Pods_Alcohol_accounting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5E61CBCB01D109F5DB5A24 /* Pods_Alcohol_accounting.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F5E61CBCB01D109F5DB5A24 /* Pods_Alcohol_accounting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alcohol_accounting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B7B609C2CD97677007F45FF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		6B7B609E2CD976A3007F45FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B7B60A02CD97CEC007F45FF /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		6B7B60A22CD97DC2007F45FF /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		6B7B60A42CD982C3007F45FF /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		6B7B60A62CD984AD007F45FF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		6B7B60AA2CD98606007F45FF /* AlcoholModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholModel.swift; sourceTree = "<group>"; };
+		6B7B60AD2CD98698007F45FF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6B7B60B02CD98854007F45FF /* AlcoholFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholFormViewModel.swift; sourceTree = "<group>"; };
+		6B7B60B22CD98946007F45FF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6B7B60B42CDA18DD007F45FF /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		6B7B60B62CDA1960007F45FF /* BasePriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePriceTextField.swift; sourceTree = "<group>"; };
 		6BE6413D2CD9555F00CB5FD9 /* Alcohol_accounting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcohol_accounting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE641402CD9555F00CB5FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BE641422CD9555F00CB5FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +79,9 @@
 		6BE641762CD9674000CB5FD9 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		6BE641772CD9674000CB5FD9 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		6BE6417B2CD967B400CB5FD9 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		6BE6417C2CD967B400CB5FD9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		6BE6417D2CD967B400CB5FD9 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		9CEB69512A3CBA4B843DEF98 /* Pods-Alcohol_accounting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alcohol_accounting.debug.xcconfig"; path = "Target Support Files/Pods-Alcohol_accounting/Pods-Alcohol_accounting.debug.xcconfig"; sourceTree = "<group>"; };
+		C339F81757D4EDA37EB530EF /* Pods-Alcohol_accounting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alcohol_accounting.release.xcconfig"; path = "Target Support Files/Pods-Alcohol_accounting/Pods-Alcohol_accounting.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +89,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACA835B7D479C1421A3D6DC /* Pods_Alcohol_accounting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B7B60A82CD985AD007F45FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BE641652CD9589D00CB5FD9 /* AlcoholFormViewController.swift */,
+				6BE641632CD9588E00CB5FD9 /* AlcoholForm.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B7B60A92CD98600007F45FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60AA2CD98606007F45FF /* AlcoholModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B7B60AC2CD9868F007F45FF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60AD2CD98698007F45FF /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		6B7B60AF2CD98850007F45FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60B02CD98854007F45FF /* AlcoholFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6BE641342CD9555F00CB5FD9 = {
 			isa = PBXGroup;
 			children = (
 				6BE6413F2CD9555F00CB5FD9 /* Alcohol_accounting */,
 				6BE6413E2CD9555F00CB5FD9 /* Products */,
+				CDDB76BFF465B65DB7352E78 /* Pods */,
+				B6CD64A1B4CB2096B2FB68DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +150,7 @@
 		6BE6413F2CD9555F00CB5FD9 /* Alcohol_accounting */ = {
 			isa = PBXGroup;
 			children = (
+				6B7B60AC2CD9868F007F45FF /* CoreData */,
 				6BE6415D2CD956FE00CB5FD9 /* Settings */,
 				6BE6415C2CD956F700CB5FD9 /* Report */,
 				6BE6415B2CD956DB00CB5FD9 /* AlcoholForm */,
@@ -124,8 +187,9 @@
 		6BE6415B2CD956DB00CB5FD9 /* AlcoholForm */ = {
 			isa = PBXGroup;
 			children = (
-				6BE641632CD9588E00CB5FD9 /* AlcoholForm.storyboard */,
-				6BE641652CD9589D00CB5FD9 /* AlcoholFormViewController.swift */,
+				6B7B60AF2CD98850007F45FF /* ViewModel */,
+				6B7B60A92CD98600007F45FF /* Model */,
+				6B7B60A82CD985AD007F45FF /* View */,
 			);
 			path = AlcoholForm;
 			sourceTree = "<group>";
@@ -176,6 +240,14 @@
 		6BE641712CD9666900CB5FD9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6B7B60B22CD98946007F45FF /* String.swift */,
+				6B7B60A22CD97DC2007F45FF /* BaseTextField.swift */,
+				6B7B60A02CD97CEC007F45FF /* ShadowView.swift */,
+				6B7B609C2CD97677007F45FF /* UIView.swift */,
+				6B7B609E2CD976A3007F45FF /* ViewController.swift */,
+				6B7B60B62CDA1960007F45FF /* BasePriceTextField.swift */,
+				6B7B60B42CDA18DD007F45FF /* Double.swift */,
+				6B7B60A42CD982C3007F45FF /* BaseButton.swift */,
 				6BE641722CD9666F00CB5FD9 /* Font */,
 			);
 			path = Extensions;
@@ -190,9 +262,26 @@
 				6BE641772CD9674000CB5FD9 /* Montserrat-SemiBold.ttf */,
 				6BE6417D2CD967B400CB5FD9 /* Poppins-Light.ttf */,
 				6BE6417B2CD967B400CB5FD9 /* Poppins-Medium.ttf */,
-				6BE6417C2CD967B400CB5FD9 /* Poppins-Regular.ttf */,
+				6B7B60A62CD984AD007F45FF /* Poppins-Regular.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		B6CD64A1B4CB2096B2FB68DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F5E61CBCB01D109F5DB5A24 /* Pods_Alcohol_accounting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDDB76BFF465B65DB7352E78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CEB69512A3CBA4B843DEF98 /* Pods-Alcohol_accounting.debug.xcconfig */,
+				C339F81757D4EDA37EB530EF /* Pods-Alcohol_accounting.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BE641542CD9556000CB5FD9 /* Build configuration list for PBXNativeTarget "Alcohol_accounting" */;
 			buildPhases = (
+				C4480530C987555D47B78DA3 /* [CP] Check Pods Manifest.lock */,
 				6BE641392CD9555F00CB5FD9 /* Sources */,
 				6BE6413A2CD9555F00CB5FD9 /* Frameworks */,
 				6BE6413B2CD9555F00CB5FD9 /* Resources */,
+				7DD8F5F5C637F484D0C6E1D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,7 +322,7 @@
 				};
 			};
 			buildConfigurationList = 6BE641382CD9555F00CB5FD9 /* Build configuration list for PBXProject "Alcohol_accounting" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -255,9 +346,9 @@
 			files = (
 				6BE641792CD9674000CB5FD9 /* Montserrat-Regular.ttf in Resources */,
 				6BE641802CD967B400CB5FD9 /* Poppins-Light.ttf in Resources */,
+				6B7B60A72CD984AD007F45FF /* Poppins-Regular.ttf in Resources */,
 				6BE641642CD9588E00CB5FD9 /* AlcoholForm.storyboard in Resources */,
 				6BE6417E2CD967B400CB5FD9 /* Poppins-Medium.ttf in Resources */,
-				6BE6417F2CD967B400CB5FD9 /* Poppins-Regular.ttf in Resources */,
 				6BE6414D2CD9556000CB5FD9 /* Assets.xcassets in Resources */,
 				6BE641692CD958E000CB5FD9 /* Report.storyboard in Resources */,
 				6BE6417A2CD9674000CB5FD9 /* Montserrat-SemiBold.ttf in Resources */,
@@ -271,19 +362,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7DD8F5F5C637F484D0C6E1D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alcohol_accounting/Pods-Alcohol_accounting-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alcohol_accounting/Pods-Alcohol_accounting-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alcohol_accounting/Pods-Alcohol_accounting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4480530C987555D47B78DA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alcohol_accounting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6BE641392CD9555F00CB5FD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7B60A12CD97CEC007F45FF /* ShadowView.swift in Sources */,
 				6BE641622CD9572700CB5FD9 /* HomeViewController.swift in Sources */,
 				6BE641662CD9589D00CB5FD9 /* AlcoholFormViewController.swift in Sources */,
 				6BE641592CD9561A00CB5FD9 /* TabBarViewController.swift in Sources */,
+				6B7B60A32CD97DC2007F45FF /* BaseTextField.swift in Sources */,
 				6BE641412CD9555F00CB5FD9 /* AppDelegate.swift in Sources */,
 				6BE641432CD9555F00CB5FD9 /* SceneDelegate.swift in Sources */,
+				6B7B60B32CD98946007F45FF /* String.swift in Sources */,
+				6B7B609D2CD97677007F45FF /* UIView.swift in Sources */,
 				6BE641742CD9667700CB5FD9 /* Font.swift in Sources */,
+				6B7B60B72CDA1960007F45FF /* BasePriceTextField.swift in Sources */,
+				6B7B60AB2CD98610007F45FF /* AlcoholModel.swift in Sources */,
 				6BE6414B2CD9555F00CB5FD9 /* Alcohol_accounting.xcdatamodeld in Sources */,
+				6B7B60A52CD982C3007F45FF /* BaseButton.swift in Sources */,
 				6BE6416B2CD958EB00CB5FD9 /* ReportViewController.swift in Sources */,
+				6B7B609F2CD976A3007F45FF /* ViewController.swift in Sources */,
+				6B7B60AE2CD98698007F45FF /* CoreDataManager.swift in Sources */,
+				6B7B60B12CD9885D007F45FF /* AlcoholFormViewModel.swift in Sources */,
+				6B7B60B52CDA18DD007F45FF /* Double.swift in Sources */,
 				6BE641702CD9591200CB5FD9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +491,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -410,7 +554,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -431,6 +575,7 @@
 		};
 		6BE641552CD9556000CB5FD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CEB69512A3CBA4B843DEF98 /* Pods-Alcohol_accounting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,6 +589,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +605,7 @@
 		};
 		6BE641562CD9556000CB5FD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C339F81757D4EDA37EB530EF /* Pods-Alcohol_accounting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,6 +619,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
