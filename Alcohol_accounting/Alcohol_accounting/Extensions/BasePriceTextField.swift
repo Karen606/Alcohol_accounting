@@ -47,7 +47,7 @@ class BasePriceTextField: UITextField, UITextFieldDelegate {
         self.layer.cornerRadius = 6
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.border.cgColor
-        self.textColor = .baseDark
+        self.textColor = .baseBlack
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

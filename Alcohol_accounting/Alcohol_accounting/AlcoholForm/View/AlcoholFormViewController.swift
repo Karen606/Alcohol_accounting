@@ -99,7 +99,11 @@ class AlcoholFormViewController: UIViewController {
         quantityTextField.text = nil
         typeButton.setTitle(nil, for: .normal)
     }
-
+    
+    @IBAction func handleTapGesture(_ sender: UITapGestureRecognizer) {
+        handleTap()
+    }
+    
     @IBAction func chooseType(_ sender: UIButton) {
         typeDropDown.show()
     }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,7 +81,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.050755380794701987" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="cellBackground"/>
                         <constraints>
                             <constraint firstItem="52d-qY-SLZ" firstAttribute="leading" secondItem="MUv-OY-Blw" secondAttribute="leading" constant="16" id="1hc-TP-YmY"/>
                             <constraint firstItem="lBV-f7-z6O" firstAttribute="centerY" secondItem="MUv-OY-Blw" secondAttribute="centerY" id="35f-MA-T3f"/>
@@ -102,6 +103,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="backgroundColor"/>
             <connections>
                 <outlet property="bgView" destination="MUv-OY-Blw" id="kuv-Vm-L9J"/>
                 <outlet property="nameLabel" destination="52d-qY-SLZ" id="HBa-1J-DVs"/>
@@ -115,5 +117,11 @@
         <image name="edit" width="20" height="20"/>
         <image name="minus" width="24" height="24"/>
         <image name="plus" width="24" height="24"/>
+        <namedColor name="backgroundColor">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cellBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,7 +47,7 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="iWL-Gv-Ymp" firstAttribute="top" secondItem="FWs-MJ-7cn" secondAttribute="bottom" constant="8" symbolic="YES" id="IZX-B1-k9l"/>
                                                                     <constraint firstAttribute="trailing" secondItem="iWL-Gv-Ymp" secondAttribute="trailing" id="KzH-KD-HO1"/>
@@ -89,7 +88,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="qTd-5e-TFO" firstAttribute="top" secondItem="OyV-g1-GOD" secondAttribute="bottom" constant="8.6666666666666679" id="3Lk-08-Oj4"/>
                                                                     <constraint firstItem="qTd-5e-TFO" firstAttribute="leading" secondItem="8X4-sJ-1ad" secondAttribute="leading" id="7Q9-dh-1ps"/>
@@ -119,7 +118,7 @@
                                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="GGV-6R-Z12" firstAttribute="leading" secondItem="6Ur-A0-n5w" secondAttribute="leading" id="BpX-dL-HUH"/>
                                                                     <constraint firstAttribute="trailing" secondItem="GGV-6R-Z12" secondAttribute="trailing" id="bDN-R7-Skd"/>
@@ -147,7 +146,7 @@
                                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="M0n-rf-bYm" secondAttribute="trailing" id="Dr2-SU-iCV"/>
                                                                     <constraint firstItem="rKl-V3-rGw" firstAttribute="top" secondItem="Kdo-Ya-Cer" secondAttribute="top" id="HlZ-vl-Hqg"/>
@@ -170,7 +169,7 @@
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Cancel">
-                                                                    <color key="titleColor" name="baseDark"/>
+                                                                    <color key="titleColor" name="buttonColor"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="clickedCancel:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gQZ-cw-Isd"/>
@@ -178,7 +177,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmT-pL-I9m" customClass="BaseButton" customModule="Alcohol_accounting" customModuleProvider="target">
                                                                 <rect key="frame" x="116" y="0.0" width="100" height="48"/>
-                                                                <color key="backgroundColor" name="baseDark"/>
+                                                                <color key="backgroundColor" name="baseBlack"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="kjf-gE-j3I"/>
                                                                     <constraint firstAttribute="height" constant="48" id="qqJ-Zz-v5v"/>
@@ -199,7 +198,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="backgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="5VV-kb-2Na" firstAttribute="top" secondItem="C3O-MH-zxf" secondAttribute="top" constant="19" id="3bw-Zw-qb1"/>
                                                     <constraint firstAttribute="trailing" secondItem="5VV-kb-2Na" secondAttribute="trailing" constant="10" id="MsO-Xf-Tvn"/>
@@ -215,7 +214,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="C3O-MH-zxf" firstAttribute="leading" secondItem="oWh-1C-j11" secondAttribute="leading" constant="16" id="GKI-bn-rGy"/>
                                             <constraint firstItem="C3O-MH-zxf" firstAttribute="top" secondItem="oWh-1C-j11" secondAttribute="top" constant="33" id="jRr-nd-LZS"/>
@@ -234,7 +233,8 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hPM-uA-9bw"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bhV-hG-Jq9" firstAttribute="leading" secondItem="hPM-uA-9bw" secondAttribute="leading" id="IVc-a1-pdg"/>
                             <constraint firstItem="bhV-hG-Jq9" firstAttribute="top" secondItem="hPM-uA-9bw" secondAttribute="top" id="UnU-PF-GWT"/>
@@ -242,6 +242,9 @@
                             <constraint firstItem="bhV-hG-Jq9" firstAttribute="centerX" secondItem="hPM-uA-9bw" secondAttribute="centerX" id="unQ-RZ-Rqa"/>
                             <constraint firstItem="hPM-uA-9bw" firstAttribute="bottom" secondItem="bhV-hG-Jq9" secondAttribute="bottom" id="wEm-q8-Afr"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EPG-5Y-7Jh" appends="YES" id="akP-Nq-eR3"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="addForm" id="g8w-Wq-m1z"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -262,6 +265,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EPG-5Y-7Jh">
+                    <connections>
+                        <action selector="handleTapGesture:" destination="Y6W-OH-hqX" id="wMX-md-Kob"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
         </scene>
@@ -269,14 +277,20 @@
     <resources>
         <image name="addForm" width="24.666666030883789" height="24.333333969116211"/>
         <image name="arrowDown" width="20" height="20"/>
+        <namedColor name="backgroundColor">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="baseBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="baseDark">
-            <color red="0.11800000071525574" green="0.11800000071525574" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="whiteText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

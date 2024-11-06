@@ -14,6 +14,7 @@ class ReportViewController: UIViewController {
     @IBOutlet weak var generateButton: BaseButton!
     @IBOutlet var reportTitlesLabel: [UILabel]!
     @IBOutlet weak var reportsTableView: UITableView!
+    @IBOutlet weak var contentView: ShadowView!
     private let startDatePicker = UIDatePicker()
     private let endDatePicker = UIDatePicker()
     private let viewModel = ReportViewModel.shared
@@ -55,6 +56,7 @@ class ReportViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] reports in
                 guard let self = self else { return }
+                self.contentView.isHidden = reports.isEmpty
                 self.reportsTableView.reloadData()
             }
             .store(in: &cancellables)

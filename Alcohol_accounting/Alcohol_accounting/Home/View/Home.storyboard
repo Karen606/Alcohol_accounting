@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mt-qf-nFz">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcohol reserves" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNK-Hl-DZc">
                                         <rect key="frame" x="137" y="107" width="119" height="19"/>
@@ -27,31 +26,33 @@
                                         <color key="textColor" name="whiteText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Vk-aK-uw7">
-                                        <rect key="frame" x="0.0" y="170" width="393" height="599"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="Ee6-zT-ggM"/>
                                 <color key="backgroundColor" name="background"/>
                                 <constraints>
-                                    <constraint firstItem="6Vk-aK-uw7" firstAttribute="leading" secondItem="Ee6-zT-ggM" secondAttribute="leading" id="297-kG-GnF"/>
                                     <constraint firstItem="GNK-Hl-DZc" firstAttribute="centerX" secondItem="Ee6-zT-ggM" secondAttribute="centerX" id="36x-Zd-Ybv"/>
-                                    <constraint firstItem="Ee6-zT-ggM" firstAttribute="bottom" secondItem="6Vk-aK-uw7" secondAttribute="bottom" id="CWd-bd-DqG"/>
-                                    <constraint firstItem="Ee6-zT-ggM" firstAttribute="trailing" secondItem="6Vk-aK-uw7" secondAttribute="trailing" id="VH9-9S-Y9K"/>
-                                    <constraint firstItem="6Vk-aK-uw7" firstAttribute="top" secondItem="GNK-Hl-DZc" secondAttribute="bottom" constant="44" id="XH7-YG-huU"/>
                                     <constraint firstItem="GNK-Hl-DZc" firstAttribute="top" secondItem="Ee6-zT-ggM" secondAttribute="top" constant="48" id="yZ8-0G-nmD"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Vk-aK-uw7">
+                                <rect key="frame" x="0.0" y="170" width="393" height="599"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kac-mg-0kn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="5mt-qf-nFz" secondAttribute="bottom" id="K62-VJ-Eq6"/>
+                            <constraint firstItem="Kac-mg-0kn" firstAttribute="bottom" secondItem="6Vk-aK-uw7" secondAttribute="bottom" id="Jfq-uD-yJq"/>
+                            <constraint firstItem="Ee6-zT-ggM" firstAttribute="trailing" secondItem="6Vk-aK-uw7" secondAttribute="trailing" id="atK-hV-MWx"/>
                             <constraint firstItem="5mt-qf-nFz" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="btR-Mq-Lz4"/>
+                            <constraint firstItem="6Vk-aK-uw7" firstAttribute="leading" secondItem="Ee6-zT-ggM" secondAttribute="leading" id="e51-Xq-9Bj"/>
+                            <constraint firstItem="6Vk-aK-uw7" firstAttribute="top" secondItem="GNK-Hl-DZc" secondAttribute="bottom" constant="44" id="l81-Ps-phH"/>
+                            <constraint firstItem="Kac-mg-0kn" firstAttribute="trailing" secondItem="6Vk-aK-uw7" secondAttribute="trailing" id="lI3-RM-866"/>
                             <constraint firstAttribute="trailing" secondItem="5mt-qf-nFz" secondAttribute="trailing" id="pHW-S0-wnO"/>
+                            <constraint firstItem="6Vk-aK-uw7" firstAttribute="leading" secondItem="Kac-mg-0kn" secondAttribute="leading" id="qqe-fJ-tGs"/>
                             <constraint firstItem="5mt-qf-nFz" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="uen-aH-aZL"/>
+                            <constraint firstItem="Ee6-zT-ggM" firstAttribute="bottom" secondItem="6Vk-aK-uw7" secondAttribute="bottom" id="xcM-Dj-gHS"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="JyZ-gQ-dVe"/>
@@ -71,11 +72,11 @@
         <namedColor name="background">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.79799997806549072" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="backgroundColor">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="whiteText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

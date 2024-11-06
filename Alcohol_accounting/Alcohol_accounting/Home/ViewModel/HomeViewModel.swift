@@ -20,10 +20,26 @@ class HomeViewModel {
     }
     
     func incrementAlcoholQuantity(for id: UUID, completion: @escaping (Error?) -> Void) {
-        CoreDataManager.shared.updateAlcoholQuantity(for: id, by: 1, completion: completion)
+        CoreDataManager.shared.updateAlcoholQuantity(for: id, by: 1) { model, error in
+            if let model = model, (model.quantity ?? 0) < 3 {
+                let title = "Low Stock Alert"
+                let body = "\(model.name ?? "Alcohol") quantity is low (\(model.quantity ?? 0))."
+                let date = Date().addingTimeInterval(5)  // Set notification for 5 seconds later, adjust as needed
+                NotificationManager.shared.scheduleNotification(for: date, title: title, body: body)
+            }
+            completion(error)
+        }
     }
     
     func decrementAlcoholQuantity(for id: UUID, completion: @escaping (Error?) -> Void) {
-        CoreDataManager.shared.updateAlcoholQuantity(for: id, by: -1, completion: completion)
+        CoreDataManager.shared.updateAlcoholQuantity(for: id, by: -1) { model, error in
+            if let model = model, (model.quantity ?? 0) < 3 {
+                let title = "Low Stock Alert"
+                let body = "\(model.name ?? "Alcohol") quantity is low (\(model.quantity ?? 0))."
+                let date = Date().addingTimeInterval(5)  // Set notification for 5 seconds later, adjust as needed
+                NotificationManager.shared.scheduleNotification(for: date, title: title, body: body)
+            }
+            completion(error)
+        }
     }
 }

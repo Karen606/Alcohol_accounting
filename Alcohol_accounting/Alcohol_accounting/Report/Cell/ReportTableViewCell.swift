@@ -15,6 +15,7 @@ class ReportTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor = .clear
         dateLabel.font = .montserratRegular(size: 15)
         nameLabel.font = .montserratRegular(size: 15)
         quantityLabel.font = .montserratRegular(size: 15)

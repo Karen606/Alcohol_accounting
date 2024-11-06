@@ -116,7 +116,7 @@ class CoreDataManager {
         }
     }
     
-    func updateAlcoholQuantity(for id: UUID, by amount: Int64, completion: @escaping (Error?) -> Void) {
+    func updateAlcoholQuantity(for id: UUID, by amount: Int64, completion: @escaping (AlcoholModel?, Error?) -> Void) {
         let backgroundContext = persistentContainer.newBackgroundContext()
         backgroundContext.perform {
             let fetchRequest: NSFetchRequest<Alcohol> = Alcohol.fetchRequest()
@@ -139,17 +139,27 @@ class CoreDataManager {
                     
                     // Save changes
                     try backgroundContext.save()
+                    
+                    let updatedAlcoholModel = AlcoholModel(
+                        id: alcohol.id,
+                        createAt: alcohol.createAt,
+                        name: alcohol.name,
+                        type: alcohol.type,
+                        volume: alcohol.volume,
+                        quantity: Int(alcohol.quantity)
+                    )
+                    
                     DispatchQueue.main.async {
-                        completion(nil)
+                        completion(updatedAlcoholModel, nil)
                     }
                 } else {
                     DispatchQueue.main.async {
-                        completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Alcohol not found"]))
+                        completion(nil, NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Alcohol not found"]))
                     }
                 }
             } catch {
                 DispatchQueue.main.async {
-                    completion(error)
+                    completion(nil, error)
                 }
             }
         }

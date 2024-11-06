@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +38,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="T0d-vo-4je" firstAttribute="top" secondItem="3XJ-WD-iJu" secondAttribute="top" id="B6n-Gu-eLb"/>
                                             <constraint firstItem="RXB-wR-CNU" firstAttribute="leading" secondItem="3XJ-WD-iJu" secondAttribute="leading" id="D3t-Dm-mqK"/>
@@ -67,7 +66,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="f4A-we-imV" firstAttribute="leading" secondItem="VuC-VE-l6u" secondAttribute="leading" id="5Mc-hr-qa9"/>
                                             <constraint firstAttribute="trailing" secondItem="f4A-we-imV" secondAttribute="trailing" id="6PT-lh-G5i"/>
@@ -81,7 +80,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2T-l4-eLa" customClass="BaseButton" customModule="Alcohol_accounting" customModuleProvider="target">
                                 <rect key="frame" x="128" y="193" width="137" height="26"/>
-                                <color key="backgroundColor" name="baseDark"/>
+                                <color key="backgroundColor" name="buttonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="45p-vL-iFE"/>
                                     <constraint firstAttribute="width" constant="137" id="Pcq-1x-D1F"/>
@@ -108,19 +107,19 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymd-Ia-1EA">
                                                 <rect key="frame" x="0.0" y="0.0" width="31.666666666666668" height="17.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="baseBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoY-WV-yFe">
                                                 <rect key="frame" x="132.66666666666666" y="0.0" width="35.333333333333343" height="17.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="baseBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjh-vw-e44">
                                                 <rect key="frame" x="256.33333333333331" y="0.0" width="56.666666666666686" height="17.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="baseBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -137,7 +136,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ORR-3A-UBP" secondAttribute="trailing" constant="18" id="IZy-JB-vbe"/>
                                     <constraint firstItem="9Z2-vw-dwR" firstAttribute="top" secondItem="ORR-3A-UBP" secondAttribute="bottom" constant="8" id="MJe-PD-7Ql"/>
@@ -158,7 +157,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="L2T-l4-eLa" firstAttribute="top" secondItem="3Ci-cj-Ab7" secondAttribute="bottom" constant="25" id="09i-Lo-haz"/>
@@ -178,6 +177,7 @@
                     <tabBarItem key="tabBarItem" title="Report" image="report" id="Rvd-ng-xM1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="contentView" destination="Svg-lt-JQ1" id="zJo-wO-QqM"/>
                         <outlet property="endDateTextField" destination="f4A-we-imV" id="dNP-qi-ZNV"/>
                         <outlet property="generateButton" destination="L2T-l4-eLa" id="Syw-Od-qZv"/>
                         <outlet property="reportsTableView" destination="9Z2-vw-dwR" id="ejI-9Y-cAp"/>
@@ -199,14 +199,17 @@
     </scenes>
     <resources>
         <image name="report" width="24.666666030883789" height="24.333333969116211"/>
-        <namedColor name="baseDark">
-            <color red="0.11800000071525574" green="0.11800000071525574" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="backgroundColor">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="baseBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="whiteText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
