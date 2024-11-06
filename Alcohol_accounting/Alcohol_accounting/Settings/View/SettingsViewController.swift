@@ -29,7 +29,6 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.setBlackNavigationColor()
         darkModeSwith.isOn = UserDefaults.standard.bool(forKey: "isDarkModeEnabled")
         notificationsSwitch.isOn = NotificationManager.shared.isNotificationEnabled()
     }

@@ -30,7 +30,7 @@ extension TabBarViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         switch viewController {
         case is HomeViewController:
-            self.setNavigationTitle(title: "")
+            self.setNavigationTitle(title: "Alcohol reserves")
         case is AlcoholFormViewController:
             self.setNavigationTitle(title: "Add alcohol")
         case is ReportViewController:

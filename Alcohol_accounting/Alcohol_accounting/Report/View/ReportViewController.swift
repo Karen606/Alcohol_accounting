@@ -27,7 +27,6 @@ class ReportViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.setBlackNavigationColor()
         viewModel.fetchData()
     }
     

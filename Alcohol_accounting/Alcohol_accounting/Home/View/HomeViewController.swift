@@ -11,23 +11,26 @@ import Combine
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var alcoholsTableView: UITableView!
     private let viewModel = HomeViewModel.shared
     private var cancellables: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.setNavigationTitle(title: "Alcohol reserves")
         setupUI()
         subscribe()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchData()
-        setClearNavigationColor()
+//        setBlackNavigationColor()
     }
     
     func setupUI() {
-        titleLabel.font = .montserratMedium(size: 28)
+        contentView.roundCorners([.topLeft, .topRight], radius: 20)
+//        titleLabel.font = .montserratMedium(size: 28)
         alcoholsTableView.roundCorners([.topLeft, .topRight], radius: 20)
         alcoholsTableView.register(UINib(nibName: "AlcoholTableViewCell", bundle: nil), forCellReuseIdentifier: "AlcoholTableViewCell")
         alcoholsTableView.delegate = self
@@ -73,13 +76,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return (section == 0) ? UIView() : nil
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return (section == 0) ? 40 : 0
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        return (section == 0) ? UIView() : nil
+//    }
+//    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return (section == 0) ? 40 : 0
+//    }
 }
 
 extension HomeViewController: AlcoholTabelViewCellDelegate {

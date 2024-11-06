@@ -23,7 +23,6 @@ class CorrectionViewController: UIViewController {
     }
     
     func setupUI() {
-        self.setBlackNavigationColor()
         self.setNaviagtionCloseButton()
         setNavigationTitle(title: "Stock correction")
         titleLabels.forEach({ $0.font = .poppinsRegular(size: 10) })

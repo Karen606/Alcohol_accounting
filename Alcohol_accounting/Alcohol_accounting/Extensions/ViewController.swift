@@ -27,18 +27,6 @@ extension UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
     
-    func setClearNavigationColor() {
-        if let navigation = self.navigationController as? NavigationViewController {
-            navigation.clearBackorund()
-        }
-    }
-    
-    func setBlackNavigationColor() {
-        if let navigation = self.navigationController as? NavigationViewController {
-            navigation.blackBackround()
-        }
-    }
-    
     @objc func clickedBack() {
         navigationController?.popViewController(animated: true)
     }

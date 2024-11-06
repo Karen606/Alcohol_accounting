@@ -18,14 +18,6 @@ class NavigationViewController: UINavigationController {
         navBarAppearance.backgroundColor = .clear
         navigationBar.standardAppearance = navBarAppearance
         navigationBar.scrollEdgeAppearance = navBarAppearance
-    }
-    
-    func clearBackorund() {
-        navigationBar.standardAppearance.backgroundColor = .clear
-        navigationBar.scrollEdgeAppearance?.backgroundColor = .clear
-    }
-    
-    func blackBackround() {
         navigationBar.standardAppearance.backgroundColor = .background
         navigationBar.scrollEdgeAppearance?.backgroundColor = .background
     }

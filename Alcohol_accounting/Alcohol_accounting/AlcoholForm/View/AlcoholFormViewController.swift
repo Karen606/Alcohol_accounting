@@ -49,10 +49,6 @@ class AlcoholFormViewController: UIViewController {
         quantityTextField.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.setBlackNavigationColor()
-    }
-    
     func subscribe() {
         viewModel.$alcoholModel
             .receive(on: DispatchQueue.main)
