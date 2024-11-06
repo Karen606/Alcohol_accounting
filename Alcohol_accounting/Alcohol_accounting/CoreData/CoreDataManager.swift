@@ -30,11 +30,11 @@ class CoreDataManager {
         backgroundContext.perform {
             let fetchRequest: NSFetchRequest<Alcohol> = Alcohol.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
-
+            
             do {
                 let results = try backgroundContext.fetch(fetchRequest)
                 let alcohol: Alcohol
-
+                
                 if let existingAlcohol = results.first {
                     alcohol = existingAlcohol
                 } else {
@@ -126,9 +126,59 @@ class CoreDataManager {
                 if let alcohol = try backgroundContext.fetch(fetchRequest).first {
                     alcohol.quantity += amount
                     if alcohol.quantity < 0 {
-                        alcohol.quantity = 0 // Ensures quantity doesn't go negative
+                        alcohol.quantity = 0
                     }
+                    
+                    
+                    let quantityChange = QuantityChange(context: backgroundContext)
+                    quantityChange.id = UUID()
+                    quantityChange.date = Date().stripTime()
+                    quantityChange.amount = amount
+                    let name = alcohol.name
+                    quantityChange.name = name // Link to the alcohol record
+                    
+                    // Save changes
                     try backgroundContext.save()
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Alcohol not found"]))
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
+    func changeAlcoholQuantity(for id: UUID, to newQuantity: Int64, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Alcohol> = Alcohol.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+            
+            do {
+                if let alcohol = try backgroundContext.fetch(fetchRequest).first {
+                    let previousQuantity = alcohol.quantity
+                    let changeAmount = newQuantity - previousQuantity
+                    alcohol.quantity = newQuantity
+                    
+                    // Ensure quantity doesn't go below zero
+                    if alcohol.quantity < 0 {
+                        alcohol.quantity = 0
+                    }
+                    
+                    let quantityChange = QuantityChange(context: backgroundContext)
+                    quantityChange.id = UUID()
+                    quantityChange.date = Date().stripTime()
+                    quantityChange.amount = changeAmount
+                    quantityChange.name = alcohol.name
+                    // Save both alcohol and quantity change
+                    try backgroundContext.save()
+                    
                     DispatchQueue.main.async {
                         completion(nil)
                     }
@@ -145,27 +195,29 @@ class CoreDataManager {
         }
     }
     
-    func changeAlcoholQuantity(for id: UUID, to newQuantity: Int64, completion: @escaping (Error?) -> Void) {
+    func saveAlcohol(quantityChangeModel: QuantityChangeModel, completion: @escaping (Error?) -> Void) {
+        let id = quantityChangeModel.id ?? UUID()
         let backgroundContext = persistentContainer.newBackgroundContext()
         backgroundContext.perform {
-            let fetchRequest: NSFetchRequest<Alcohol> = Alcohol.fetchRequest()
+            let fetchRequest: NSFetchRequest<QuantityChange> = QuantityChange.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
             
             do {
-                if let alcohol = try backgroundContext.fetch(fetchRequest).first {
-                    alcohol.quantity = newQuantity
-                    if alcohol.quantity < 0 {
-                        alcohol.quantity = 0
-                    }
-                    
-                    try backgroundContext.save()
-                    DispatchQueue.main.async {
-                        completion(nil)
-                    }
+                let results = try backgroundContext.fetch(fetchRequest)
+                let quantityChange: QuantityChange
+                
+                if let existingquantityChange = results.first {
+                    quantityChange = existingquantityChange
                 } else {
-                    DispatchQueue.main.async {
-                        completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Alcohol not found"]))
-                    }
+                    quantityChange = QuantityChange(context: backgroundContext)
+                    quantityChange.id = id
+                }
+                quantityChange.name = quantityChangeModel.name
+                quantityChange.amount = Int64(quantityChangeModel.amount ?? 0)
+                quantityChange.date = Date().stripTime()
+                try backgroundContext.save()
+                DispatchQueue.main.async {
+                    completion(nil)
                 }
             } catch {
                 DispatchQueue.main.async {
@@ -174,4 +226,38 @@ class CoreDataManager {
             }
         }
     }
+    
+    func fetchAllQuantityChanges(from startDate: Date, to endDate: Date, completion: @escaping ([QuantityChangeModel], Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<QuantityChange> = QuantityChange.fetchRequest()
+            
+            // Predicate to filter quantity changes by date range
+            let datePredicate = NSPredicate(format: "date >= %@ AND date <= %@", startDate as NSDate, endDate as NSDate)
+            fetchRequest.predicate = datePredicate
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+            
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                
+                // Convert results to an array of QuantityChangeModel for easier handling
+                let changes = results.map {
+                    QuantityChangeModel(id: $0.id, date: $0.date, amount: Int($0.amount), name: $0.name)
+                }
+                
+                // Return results on the main thread
+                DispatchQueue.main.async {
+                    completion(changes, nil)
+                }
+            } catch {
+                // Handle fetch error
+                DispatchQueue.main.async {
+                    completion([], error)
+                }
+            }
+        }
+    }
+
+
 }
+

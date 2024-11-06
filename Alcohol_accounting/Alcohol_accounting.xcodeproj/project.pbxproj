@@ -26,6 +26,11 @@
 		6B7B60C52CDA751C007F45FF /* CorrectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60C22CDA751C007F45FF /* CorrectionViewController.swift */; };
 		6B7B60C72CDA75BE007F45FF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60C62CDA75BE007F45FF /* NavigationViewController.swift */; };
 		6B7B60CA2CDA7BCF007F45FF /* CorrectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60C92CDA7BCF007F45FF /* CorrectionViewModel.swift */; };
+		6B7B60CD2CDA8C0B007F45FF /* QuantityChangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60CC2CDA8C0B007F45FF /* QuantityChangeModel.swift */; };
+		6B7B60D02CDA8C40007F45FF /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60CF2CDA8C40007F45FF /* ReportViewModel.swift */; };
+		6B7B60D22CDA8D40007F45FF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60D12CDA8D40007F45FF /* Date.swift */; };
+		6B7B60DA2CDB2E59007F45FF /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7B60D92CDB2E59007F45FF /* ReportTableViewCell.xib */; };
+		6B7B60DB2CDB2E59007F45FF /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60D82CDB2E59007F45FF /* ReportTableViewCell.swift */; };
 		6BE641412CD9555F00CB5FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE641402CD9555F00CB5FD9 /* AppDelegate.swift */; };
 		6BE641432CD9555F00CB5FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE641422CD9555F00CB5FD9 /* SceneDelegate.swift */; };
 		6BE641482CD9555F00CB5FD9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6BE641472CD9555F00CB5FD9 /* Base */; };
@@ -71,6 +76,11 @@
 		6B7B60C32CDA751C007F45FF /* CorrectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectionViewController.xib; sourceTree = "<group>"; };
 		6B7B60C62CDA75BE007F45FF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		6B7B60C92CDA7BCF007F45FF /* CorrectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionViewModel.swift; sourceTree = "<group>"; };
+		6B7B60CC2CDA8C0B007F45FF /* QuantityChangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityChangeModel.swift; sourceTree = "<group>"; };
+		6B7B60CF2CDA8C40007F45FF /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		6B7B60D12CDA8D40007F45FF /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		6B7B60D82CDB2E59007F45FF /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		6B7B60D92CDB2E59007F45FF /* ReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
 		6BE6413D2CD9555F00CB5FD9 /* Alcohol_accounting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcohol_accounting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE641402CD9555F00CB5FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BE641422CD9555F00CB5FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +196,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B7B60CB2CDA8BFA007F45FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60CC2CDA8C0B007F45FF /* QuantityChangeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B7B60CE2CDA8C34007F45FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60CF2CDA8C40007F45FF /* ReportViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B7B60D32CDB2E2A007F45FF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B7B60D82CDB2E59007F45FF /* ReportTableViewCell.swift */,
+				6B7B60D92CDB2E59007F45FF /* ReportTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		6BE641342CD9555F00CB5FD9 = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +293,9 @@
 		6BE6415C2CD956F700CB5FD9 /* Report */ = {
 			isa = PBXGroup;
 			children = (
+				6B7B60D32CDB2E2A007F45FF /* Cell */,
+				6B7B60CE2CDA8C34007F45FF /* ViewModel */,
+				6B7B60CB2CDA8BFA007F45FF /* Model */,
 				6BE641672CD958D100CB5FD9 /* View */,
 			);
 			path = Report;
@@ -307,6 +345,7 @@
 				6B7B609C2CD97677007F45FF /* UIView.swift */,
 				6B7B609E2CD976A3007F45FF /* ViewController.swift */,
 				6B7B60B62CDA1960007F45FF /* BasePriceTextField.swift */,
+				6B7B60D12CDA8D40007F45FF /* Date.swift */,
 				6B7B60B42CDA18DD007F45FF /* Double.swift */,
 				6B7B60A42CD982C3007F45FF /* BaseButton.swift */,
 				6BE641722CD9666F00CB5FD9 /* Font */,
@@ -412,6 +451,7 @@
 				6BE6417E2CD967B400CB5FD9 /* Poppins-Medium.ttf in Resources */,
 				6BE6414D2CD9556000CB5FD9 /* Assets.xcassets in Resources */,
 				6BE641692CD958E000CB5FD9 /* Report.storyboard in Resources */,
+				6B7B60DA2CDB2E59007F45FF /* ReportTableViewCell.xib in Resources */,
 				6BE6417A2CD9674000CB5FD9 /* Montserrat-SemiBold.ttf in Resources */,
 				6BE641502CD9556000CB5FD9 /* Base in Resources */,
 				6BE641482CD9555F00CB5FD9 /* Base in Resources */,
@@ -478,17 +518,21 @@
 				6BE641622CD9572700CB5FD9 /* HomeViewController.swift in Sources */,
 				6BE641662CD9589D00CB5FD9 /* AlcoholFormViewController.swift in Sources */,
 				6BE641592CD9561A00CB5FD9 /* TabBarViewController.swift in Sources */,
+				6B7B60CD2CDA8C0B007F45FF /* QuantityChangeModel.swift in Sources */,
 				6B7B60A32CD97DC2007F45FF /* BaseTextField.swift in Sources */,
 				6BE641412CD9555F00CB5FD9 /* AppDelegate.swift in Sources */,
+				6B7B60D22CDA8D40007F45FF /* Date.swift in Sources */,
 				6BE641432CD9555F00CB5FD9 /* SceneDelegate.swift in Sources */,
 				6B7B60CA2CDA7BCF007F45FF /* CorrectionViewModel.swift in Sources */,
 				6B7B60B32CD98946007F45FF /* String.swift in Sources */,
 				6B7B609D2CD97677007F45FF /* UIView.swift in Sources */,
 				6B7B60BC2CDA33A2007F45FF /* AlcoholTableViewCell.swift in Sources */,
+				6B7B60DB2CDB2E59007F45FF /* ReportTableViewCell.swift in Sources */,
 				6BE641742CD9667700CB5FD9 /* Font.swift in Sources */,
 				6B7B60C52CDA751C007F45FF /* CorrectionViewController.swift in Sources */,
 				6B7B60B72CDA1960007F45FF /* BasePriceTextField.swift in Sources */,
 				6B7B60AB2CD98610007F45FF /* AlcoholModel.swift in Sources */,
+				6B7B60D02CDA8C40007F45FF /* ReportViewModel.swift in Sources */,
 				6BE6414B2CD9555F00CB5FD9 /* Alcohol_accounting.xcdatamodeld in Sources */,
 				6B7B60A52CD982C3007F45FF /* BaseButton.swift in Sources */,
 				6BE6416B2CD958EB00CB5FD9 /* ReportViewController.swift in Sources */,
