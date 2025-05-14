@@ -26,7 +26,7 @@ class AlcoholTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .clear
-        bgView.layer.cornerRadius = 20
+//        bgView.layer.cornerRadius = 20
         bgView.layer.borderColor = UIColor.black.withAlphaComponent(0.2).cgColor
         bgView.layer.borderWidth = 0.1
         typeLabel.font = .poppinsLight(size: 20)

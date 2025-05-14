@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B2654332DD4B68B00F2C6F4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2654322DD4B68B00F2C6F4 /* RootViewController.swift */; };
 		6B7B609D2CD97677007F45FF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B609C2CD97677007F45FF /* UIView.swift */; };
 		6B7B609F2CD976A3007F45FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B609E2CD976A3007F45FF /* ViewController.swift */; };
 		6B7B60A12CD97CEC007F45FF /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B60A02CD97CEC007F45FF /* ShadowView.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		5F5E61CBCB01D109F5DB5A24 /* Pods_Alcohol_accounting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alcohol_accounting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2654322DD4B68B00F2C6F4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		6B7B609C2CD97677007F45FF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		6B7B609E2CD976A3007F45FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6B7B60A02CD97CEC007F45FF /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 		6BE641572CD955B600CB5FD9 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				6B2654322DD4B68B00F2C6F4 /* RootViewController.swift */,
 				6BE641582CD9561A00CB5FD9 /* TabBarViewController.swift */,
 				6BE641462CD9555F00CB5FD9 /* TabBar.storyboard */,
 				6B7B60C62CDA75BE007F45FF /* NavigationViewController.swift */,
@@ -428,7 +431,6 @@
 				};
 			};
 			buildConfigurationList = 6BE641382CD9555F00CB5FD9 /* Build configuration list for PBXProject "Alcohol_accounting" */;
-			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -436,6 +438,7 @@
 				Base,
 			);
 			mainGroup = 6BE641342CD9555F00CB5FD9;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 6BE6413E2CD9555F00CB5FD9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -480,9 +483,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Alcohol_accounting/Pods-Alcohol_accounting-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Alcohol_accounting/Pods-Alcohol_accounting-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -540,6 +547,7 @@
 				6B7B60AB2CD98610007F45FF /* AlcoholModel.swift in Sources */,
 				6B7B60D02CDA8C40007F45FF /* ReportViewModel.swift in Sources */,
 				6BE6414B2CD9555F00CB5FD9 /* Alcohol_accounting.xcdatamodeld in Sources */,
+				6B2654332DD4B68B00F2C6F4 /* RootViewController.swift in Sources */,
 				6B7B60DF2CDB40ED007F45FF /* NotificationManager.swift in Sources */,
 				6B7B60A52CD982C3007F45FF /* BaseButton.swift in Sources */,
 				6BE6416B2CD958EB00CB5FD9 /* ReportViewController.swift in Sources */,
@@ -707,9 +715,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -717,9 +725,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Karen.Alcohol-accounting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -737,9 +747,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -747,9 +757,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Karen.Alcohol-accounting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

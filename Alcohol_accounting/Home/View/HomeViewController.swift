@@ -25,13 +25,13 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchData()
-//        setBlackNavigationColor()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        contentView.roundCorners([.topLeft, .topRight], radius: 20)
     }
     
     func setupUI() {
-        contentView.roundCorners([.topLeft, .topRight], radius: 20)
-//        titleLabel.font = .montserratMedium(size: 28)
-        alcoholsTableView.roundCorners([.topLeft, .topRight], radius: 20)
         alcoholsTableView.register(UINib(nibName: "AlcoholTableViewCell", bundle: nil), forCellReuseIdentifier: "AlcoholTableViewCell")
         alcoholsTableView.delegate = self
         alcoholsTableView.dataSource = self
